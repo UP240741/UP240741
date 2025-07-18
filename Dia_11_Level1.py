@@ -2,89 +2,93 @@
 
 # Level 1
 
-#Ejercicio_1
-def add_two_numbers(a, b):
+import math
+
+# Ejercicio 1:
+def sumar_dos_numeros(a, b):
     return a + b
 
-#Ejercicio_2
-def area_of_circle(r):
-    return math.pi * r * r
+# Ejercicio 2: 
+def area_circulo(radio):
+    return math.pi * radio * radio
 
-#Ejercicio_3
-def add_all_nums(*args):
+# Ejercicio 3: 
+def sumar_todos_los_numeros(*args):
     if all(isinstance(x, (int, float)) for x in args):
-    return sum(args)
-    return "All arguments must be numbers"
+        return sum(args)
+    return "Todos los argumentos deben ser números"
 
-#Ejercicio_4
-def convert_celsius_to_fahrenheit(c):
+# Ejercicio 4: 
+def convertir_celsius_a_fahrenheit(c):
     return (c * 9/5) + 32
 
-#Ejercicio_5
-def check_season(month):
-    month = month.lower()
-    if month in ['september', 'october', 'november']:
-        return 'Autumn'
-    elif month in ['december', 'january', 'february']:
-        return 'Winter'
-    elif month in ['march', 'april', 'may']:
-        return 'Spring'
-    elif month in ['june', 'july', 'august']:
-        return 'Summer'
+# Ejercicio 5: 
+def comprobar_estacion(mes):
+    mes = mes.lower()
+    if mes in ['septiembre', 'octubre', 'noviembre']:
+        return 'Otoño'
+    elif mes in ['diciembre', 'enero', 'febrero']:
+        return 'Invierno'
+    elif mes in ['marzo', 'abril', 'mayo']:
+        return 'Primavera'
+    elif mes in ['junio', 'julio', 'agosto']:
+        return 'Verano'
     else:
-        return 'Invalid month'
+        return 'Mes inválido'
 
-#Ejercicio_6
-def calculate_slope(x1, y1, x2, y2):
+# Ejercicio 6: 
+def calcular_pendiente(x1, y1, x2, y2):
+    if x2 == x1:
+        return "Pendiente indefinida (línea vertical)"
     return (y2 - y1) / (x2 - x1)
 
-#Ejercicio_7
-def solve_quadratic_eqn(a, b, c):
-    d = b ** 2 - 4 * a * c
-    if d < 0:
-        return "No real roots"
-    elif d == 0:
-        root = -b / (2 * a)
-        return (root,)
+# Ejercicio 7: 
+def resolver_ecuacion_cuadratica(a, b, c):
+    discriminante = b ** 2 - 4 * a * c
+    if discriminante < 0:
+        return "No tiene raíces reales"
+    elif discriminante == 0:
+        raiz = -b / (2 * a)
+        return (raiz,)
     else:
-        root1 = (-b + math.sqrt(d)) / (2 * a)
-        root2 = (-b - math.sqrt(d)) / (2 * a)
-        return (root1, root2)
+        raiz1 = (-b + math.sqrt(discriminante)) / (2 * a)
+        raiz2 = (-b - math.sqrt(discriminante)) / (2 * a)
+        return (raiz1, raiz2)
 
-#Ejercicio_8
-def print_list(lst):
-    for item in lst:
-        print(item)
+# Ejercicio 8: 
+def imprimir_lista(lista):
+    for elemento in lista:
+        print(elemento)
 
-#Ejercicio_9
-def reverse_list(lst):
-    return lst[::-1]
+# Ejercicio 9: 
+def invertir_lista(lista):
+    return lista[::-1]
 
-#Ejercicio_10
-def capitalize_list_items(lst):
-    return [item.capitalize() for item in lst]
+# Ejercicio 10: 
+def capitalizar_elementos_lista(lista):
+    return [elemento.capitalize() for elemento in lista]
 
-#Ejercicio_11
-def add_item(lst, item):
-    lst.append(item)
-    return lst
+# Ejercicio 11: 
+def agregar_elemento(lista, elemento):
+    lista.append(elemento)
+    return lista
 
-#Ejercicio_12
-def remove_item(lst, item):
-    if item in lst:
-        lst.remove(item)
-    return lst
+# Ejercicio 12: 
+def eliminar_elemento(lista, elemento):
+    if elemento in lista:
+        lista.remove(elemento)
+    return lista
 
-#Ejercicio_13
-def sum_of_numbers(n):
+# Ejercicio 13: 
+def suma_numeros(n):
     return sum(range(n + 1))
 
-#Ejercicio_14
-def sum_of_odds(n):
+# Ejercicio 14: 
+def suma_impares(n):
     return sum(i for i in range(n + 1) if i % 2 != 0)
 
-#Ejercicio_15
-def sum_of_even(n):
+# Ejercicio 15: 
+def suma_pares(n):
     return sum(i for i in range(n + 1) if i % 2 == 0)
 
 
